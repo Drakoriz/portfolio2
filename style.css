@@ -1,0 +1,541 @@
+body{background-color: white;}
+
+
+.main{
+width: 100%;
+height: 80vh;
+aspect-ratio:16/9;
+padding-bottom: 30px;
+}
+
+/* On remplit la page .*/
+.main-background{
+position: absolute;
+top: 0;
+left: 0;
+	width:100%;
+	height :100%;
+	object-fit: cover;
+	z-index: -3;
+	}
+/* On remplit la page avec la vidéo, on met la vidéo au plan -3 . */
+.main-text{
+position: fixed;
+top:50%;
+left:50%;
+width: 100%;
+transform:translate(-50%,-50%); /* C'est pour centrer le contenu par rapport à son conteneur .*/
+text-align:center;
+z-index: -2;
+}
+/* On ajoute le texte sur la vidéo au centre, et on met le texte au plan -2 pour que cela apparaisse sur l'écran, mais que cela disparaisse par la suite, pour donner un effet visuel comme si le texte descendait .*/
+	
+h1{
+  color: white;
+font-family: "helvetica";
+  font-size: 5rem;
+  font-weight: 400;
+} 
+/* Ici, on s'interesse au Prénom . */
+
+
+.main-text p{
+color: white;
+font-size:2rem;
+font-weight:200;}
+/* Ici, le texte de description science des données . */
+.section{
+z-index:3;
+padding:150px 0;
+}
+/* j'ai crée une section, mais je ne l'ai utilisé que deux fois .*/
+
+
+.boxed{
+	max-width:1280px;
+	margin-inline:auto;}
+
+/* j'ai délimité ma page en terme de taille pour un aspect esthétique . */
+.page1{
+  color: black;
+  font-family: Helvetica;
+  font-size: 25px;
+
+  z-index: 3;
+}
+
+.page1{
+  color: black;
+  font-family: Helvetica;
+  font-size: 25px;
+
+  z-index: 3;
+}
+/* Je ne l'ai utilisé que deux fois, et c'était pour la partie texte . */
+.w40{
+  text-align: center;
+width: 40%;
+padding: 30px;
+position: absolute;
+ top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+#w60 {
+padding-top:5%;
+  width: 60%;
+  font-weight: 200;
+left: 50%;
+
+/* à la base quand on utilise des w40 et w60 c'est pour définir des tailles(ici 40% et 60% qu'on utilisera un peu partout dans le html, mais je ne l'ai utilisé qu'une fois .*/
+
+}
+
+#presentation{
+font-size: 3rem; }
+/* C'est pour placer le titre de la section .*/
+#competences{
+position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+font-size: 3rem; 
+padding-bottom: 20%;
+z-index: -2;
+}
+/* C'est pour placer le titre de la section .*/
+#realisations{
+padding-top:30%;
+position: absolute;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+font-size: 3rem; 
+padding-bottom: 20%;
+z-index:-2;
+}
+/* C'est pour placer le titre de la section, elle sera utilisée 2 fois .*/
+#deco{
+position:absolute;
+  flex: 1; 
+  width: 20%; 
+  right: 10%;
+	transform: translateY(-40%); /* Pour centrer verticalement l'élément */
+}
+/* C'est pour mettre une vidéo sur le coté de manière esthétique .*/
+
+
+.flex-container {
+  display: flex;
+  justify-content: space-between; /* Pour répartir les éléments horizontalement */
+}
+
+/* Ici, on créer un conteneur où l'on va mettre nos compétences dans une vidéo .*/
+.video-wrapper {
+  position: relative; 
+  width: 23%; 
+  padding: 20px;
+  height: 300px; 
+  overflow: hidden;
+z-index:2;
+}
+/* Ici, on prépare l'espace où l'on va mettre la vidéo .*/
+
+
+.video {
+  width: auto; /* Pour remplir complètement le conteneur */
+  height: 100%; 
+}
+/* La vidéo .*/
+
+
+
+.video-title {
+font-size: 24px; 
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Mettre le z-index au-dessus de celui de la vidéo pour que le texte  apparaisse .*/
+}
+
+.liste {
+    display: none; /* Cacher la liste par défaut, vu qu'on va le faire apparaitre avec hover*/
+    position: absolute;
+    top: 1%; 
+    left: 6%; 
+    width: 89%; 
+    height: 83%; 
+    background-color: #F0E8D3; /* couleur du conteneur de la colonne  .*/
+    padding: 10px; 
+    z-index: 4; /* Pour s'assurer que la liste est au-dessus de la vidéo */
+}
+
+
+
+.video-wrapper:hover .liste {
+    display: block; /* Afficher la liste au survol de .video-wrapper */
+}
+.video-wrapper:hover .liste2 {
+    display: block; 
+}
+.video-wrapper:hover .liste3 {
+    display: block; 
+}
+.video-wrapper:hover .liste4 {
+    display: block; 
+}
+/* On a créé 4 listes pour pouvoir changer les couleurs des conteneurs.*/
+.liste li { 
+text-align:center;
+margin-top: 2%;
+width: 100%;
+  color: white;
+  font-size: 2rem;
+  font-weight: 50;
+}
+/* Cette partie, c'est pour le texte .*/
+.liste2 {
+    display: none; 
+    list-style: none; 
+    position: absolute;
+    top: 1%; 
+    left: 6%; 
+    width: 89%; 
+    height: 83%; 
+    background-color: #C2B97C; 
+    padding: 10px; 
+    z-index: 4; /
+}
+.liste2 li { 
+text-align:center;
+margin-top: 2%;
+width: 100%;
+  color: white;
+  font-size: 1rem;
+  font-weight: 50;
+}
+.liste3 {
+    display: none; 
+    list-style: none; 
+    position: absolute;
+    top: 1%; 
+    left: 6%; 
+    width: 89%; 
+    height: 83%; 
+    background-color: #F7E4C9; 
+    padding: 10px; 
+    z-index: 4; 
+}
+.liste3 li { 
+text-align:center;
+margin-top: 0,5%;
+width: 100%;
+  color: white;
+  font-size: 2rem;
+  font-weight: 50;
+}
+
+.liste4 {
+    display: none; 
+    list-style: none; 
+    position: absolute;
+    top: 1%; 
+    left: 6%; 
+    width: 89%; 
+    height: 83%; 
+    background-color: #ECEEA1; 
+    padding: 10px; 
+    z-index: 4; 
+}
+
+.liste4 li { 
+text-align:center;
+margin-top: 2%;
+width: 100%;
+  color: white;
+  font-size: 2rem;
+  font-weight: 50;
+
+}
+
+/* DEBUT DU CARROUSEL */
+
+.carousel {
+    margin-left: 15%;
+    margin-right: 15%;
+margin-top: 20%;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+
+.slide-container { 
+    display: block; 
+}
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}  
+ 
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+/* Cette partie sert à ajuster l'image par rapport à la slide .*/
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    font-size: 100px;
+    line-height: 600px;
+    color: white;
+}
+/* Cette partie sert à ajuster les controles du carrousel, en mettant en blanc l'icone par exemple .*/
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+/* Ces parties servent à controler le défilement des slides*/
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+/* Cette partie sert à afficher les ronds où on pourra cliquer dessus pour faire defiler les slides si on ne veut pas utiliser les curseurs . */
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+.slide-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+text-align:center;
+margin-top: 0,5%;
+width: 100%;
+  color: white;
+
+}
+
+.slide-text h3 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 50;
+margin-left: 10%;
+margin-right: 10%;
+
+}
+
+.slide-text p {
+margin-left: 10%;
+margin-right: 10%;
+
+  font-size: 2rem;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+/* FIN DU CARROUSEL */
+
+/* Cette partie a été créée parce que mes liens cliquables ne fonctionnaient pas à l'intérieur du carrousel. J'ai dû mettre des icônes séparées représentant chaque diapositive. */
+
+
+.button-link {
+ position: absolute;
+bottom: 2%;
+right: 20%;
+cursor: allowed;
+}
+
+.button-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.flex-container2 {
+  display: flex;
+  justify-content: center; 
+  margin-top: 5%; /* Espacement par rapport au carrousel */
+}
+
+.button-link2 {
+  display: inline-block;
+  margin-left: 10%; 
+}
+
+.button-icon2 {
+  width: 50px; 
+  height: 50px; 
+}
+/* Taille des icones */
+
+/*PARTIE FORMULAIRE MAIL*/
+/* Le formulaire n'a pas d'utilité puisque JavaScript n'est pas utilisé. Néanmoins, le bouton "Envoyer" peut être utilisé pour ouvrir la boîte de messagerie de l'utilisateur et écrire un e-mail au destinataire déjà préinscrit. */
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-submit {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+small {
+  font-size: 12px;
+}
+
+#contact{
+padding-top: 10%;}
+
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+padding-bottom:2%;
+}
+
+#header a {
+  margin-right: 20px; }
+
+#header p {
+  font-size: 16px;
+  color: #333;
+}
+
+#contact {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact form p {
+  margin-bottom: 10px;
+}
+
+#buttons {
+  position: fixed; 
+  top: 50%; 
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+left:92%;
+z-index:2;
+}
+/* Positionnement des boutons  */
+
+
+.buttonv {
+  margin-bottom: 10px; 
+}
+
+/* Espacement entre les boutons  */
+
+
+
